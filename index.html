@@ -1,0 +1,86 @@
+<html>
+<head>
+<meta http-equiv="refresh" content="60" />
+</head>
+<body>
+<style>
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #ececec;
+}
+
+.heading {
+  color: #767676;
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.thumbnail { /* the width and height here are your resultant sizes. */
+  width: 20vw;
+  height: 90vh;
+  float:left;
+  margin:10px;
+  position: relative;
+  border: solid 1px #767676;
+  padding: 5px;
+  overflow: scroll;
+}
+ 
+.thumbnail iframe {  /* the width and height here are your "unshrunken" sizes.  Important bc of the scale variable later. */
+  position: relative;
+  z-index: 1;
+  width: 48vw;
+  height: 9999px;
+ 
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  transform-origin: 0 0;
+
+ 
+  -webkit-transform:  scale(0.4, 0.4);   /* Gets the size down to fit into your .thumbnail. */
+  -moz-transform:  scale(0.4, 0.4);    /* Gets the size down to fit into your .thumbnail. */
+  transform:  scale(0.4, 0.4);       /* Gets the size down to fit into your .thumbnail. */
+  overflow: hidden;
+
+}
+
+.thumbnail a {
+  position: absolute;
+  top: 300px;
+}
+
+</style>
+
+<div class="wrapper">
+	<div class="thumbnail"> 
+		<div class="heading">Team Alpha</div>
+		<iframe src="https://my7.digitalexperience.ibm.com/e61db5af-ac13-45a5-af30-6626c77f58f6/"></iframe>
+	</div> 
+
+	<div class="thumbnail"> 
+		<div class="heading">Team Beta</div>
+		<iframe src="https://my12.digitalexperience.ibm.com/f65c109a-b965-43a3-b102-ea161ba72a26/"></iframe>
+	</div> 
+
+
+	<div class="thumbnail"> 
+		<div class="heading">Team Gamma</div>
+		<iframe src="https://my1.digitalexperience.ibm.com/4a644948-1d81-49bf-bec9-ce135f1438b7/"></iframe>
+	</div> 
+
+	<div class="thumbnail"> 
+		<div class="heading">Team Delta</div>
+		<iframe src="https://my7.digitalexperience.ibm.com/362ed8d6-a6e2-4366-a3f4-684389b2da18/"></iframe>
+	</div> 
+
+</div>
+</body>
+</html>
+
+
+
